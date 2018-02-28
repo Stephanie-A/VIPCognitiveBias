@@ -13,10 +13,6 @@ def generalize(file, hypo):
     s = ''
     for i in hypList:
         if i != '':
-            s += i + ' '
+            s += i + ','
 
     return s
-
-temp = generalize("extraneousWords.txt", "I think that it's a nice day") 
-
-print(temp)
