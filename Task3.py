@@ -30,6 +30,3 @@ def confidenceRating(hypothesis): # pass in the hypothesis that has removed all 
             if key[-1] == '5':
                 print"There are " + str(num) + " people who are super confident about your hypothesis."
     print "There are " + str(diff) + " people who don't agree with you."
-
-hypothesis = "New York City 1949 5"
-(confidenceRating(hypothesis))
