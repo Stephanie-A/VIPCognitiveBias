@@ -1,13 +1,15 @@
-def confidenceRating(database, hypothesis): # pass in the hypothesis that has removed all generic words as a string, hypothesis
+from dicts import confidence
+
+def confidenceRating(hypothesis): # pass in the hypothesis that has removed all generic words as a string, hypothesis
 # is a string, pass in database which is a dictionary
     hypo = hypothesis.split(',')
 
-    for key in database.keys():
+    for key in confidence.keys():
         keyString = key[:-3] # keep track of the string that does not contain the rating in it, only the hypothesis
         store = keyString.split(' ')
 
         similarity = 0 # keep track of how many phrases are the same
-        num = int(database[key])
+        num = int(confidence[key])
 
         words = hypothesis.split(' ')
 
@@ -23,13 +25,3 @@ def confidenceRating(database, hypothesis): # pass in the hypothesis that has re
                 return "There are " + str(num) + " people who are kind of confident about your hypothesis."
             if key[-1] == '3':
                 return "There are " + str(num) + " people who are somewhat confident about your hypothesis."
-
-
-dict = {'Atlanta people 2000 4': '6', 'New York City 1949 5': '7', 'Thai 10 people 1998 3': '11'}
-hypothesis = "New York City 1949 5"
-print(confidenceRating(dict, hypothesis))
-hypothesis2 = "Thai 1997 10 people"
-print(confidenceRating(dict, hypothesis2))
-
-hypothesis3 = "Thai 1998 10 people"
-print(confidenceRating(dict, hypothesis2))

@@ -1,5 +1,5 @@
-hypothesis = "I think that "
-other = "I think that "
+hypothesis = "New York City 1949 5"
+other = "Other "
 
 confidence = {
     hypothesis + ' 1': 10,
