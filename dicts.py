@@ -7,11 +7,11 @@ confidence = {
     hypothesis + ' 3': 2,
     hypothesis + ' 4': 20,
     hypothesis + ' 5': 40,
-    other + ' 1': 10,
-    other + ' 2': 3,
-    other + ' 3': 2,
-    other + ' 4': 20,
-    other + ' 5': 40,
+    other + ' 1': 1,
+    other + ' 2': 2,
+    other + ' 3': 3,
+    other + ' 4': 4,
+    other + ' 5': 5,
 }
 
 questions = {
