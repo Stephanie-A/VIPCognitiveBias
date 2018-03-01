@@ -1,5 +1,6 @@
-hypothesis = "New York City,1949,5,"
+hypothesis = "50s,or,60s"
 other = "Other,"
+notFocusing = 'people'
 
 confidence = {
     hypothesis + '1': 10,
@@ -18,5 +19,8 @@ questions = {
     'location' : 'Why do you think it is in that location?',
     'person' : 'Why do you think it is that person?',
     'time' : 'Why do you think it is during that time period',
-    'other' : 'Why do you think it is so?'
+    'notFocusing' : 'User is not focusing on ' + notFocusing
+    'anchor' : 'Any evidence that it is not ' + hypothesis
 }
+
+# Make function that returns questions to ask user and asks for anchoring bias
