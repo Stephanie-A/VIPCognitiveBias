@@ -1,6 +1,6 @@
 def confirmationBias(isSupportingQuestion, hypothesis):
     hypo = hypothesis.split(',')
-    dict topics = {
+    topics = {
         'location': 0,
         'time' : 0,
         'person' : 0
@@ -13,9 +13,9 @@ def confirmationBias(isSupportingQuestion, hypothesis):
             # NEED TO IMPLEMENT OTHER DBS
 
     maxTopic = ""
-    if (topics['location'] > topics['time'] && topics['location'] > topics['people']):
+    if (topics['location'] > topics['time'] and topics['location'] > topics['person']):
         maxTopic = 'location'
-    elif (topics['time'] > topics['location'] && topics['time'] > topics['people']):
+    elif (topics['time'] > topics['location'] and topics['time'] > topics['person']):
         maxTopic = 'time'
     else:
         maxTopic = 'person'
