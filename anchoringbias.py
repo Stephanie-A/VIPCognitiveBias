@@ -12,11 +12,3 @@ def anchoringbias(focus, dict1): # pass in the area of focus
 
 
 
-dict1 = ["location", "person", "time"];
-print(anchoringbias("location", dict1));
-dict3 = ["person", "time", "location"];
-print(anchoringbias("location", dict3));
-dict4 = ["person", "time"];
-print(anchoringbias("time", dict4));
-dict5 =["location"];
-print(anchoringbias("location", dict5));
