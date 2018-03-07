@@ -7,11 +7,12 @@ def confirmationBias(isSupportingQuestion, hypothesis):
     }
 
     for word in hypo:
-        if word in open('cities15000.txt').read():
+        if word in open('Resources/cities15000.txt').read():
             topics['location'] += 1
-        # elif word in
-            # NEED TO IMPLEMENT OTHER DBS
-
+        elif word in open('Resources/time.txt').read():
+            topics['time'] += 1
+        elif word in open('Resources/clothes.txt').read():
+            topics['person'] += 1
     maxTopic = ""
     if (topics['location'] > topics['time'] and topics['location'] > topics['person']):
         maxTopic = 'location'
