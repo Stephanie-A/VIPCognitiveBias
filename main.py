@@ -1,6 +1,7 @@
 from Generalize import generalize
-from confirmationbias import confirmationbias
+from confirmationbias import confirmationBias
 from anchoringbias import anchoringbias
+from dicts import counter
 
 # This main function takes in a hypothesis String, then:
 # 1.) Generalizes the hypothesis by removing all extraneous words.
@@ -12,9 +13,10 @@ from anchoringbias import anchoringbias
 
 counter = 0 # Global variable to keep track of times main is called.
 
-def main(hypothesis, counter):
-
-    gen_hypo = generalize("extraneousWords.txt", hypothesis) # Get hypothesis as ',' separated String
+def main(hypothesis):
+    global counter
+    counter = counter + 1
+    gen_hypo = generalize("Resources/extraneousWords.txt", hypothesis) # Get hypothesis as ',' separated String
 
     ###### CREDIT: This section is Stephanie's focus-determining code right here,
     ######         obtained from the 'confirmationbias' file.
@@ -45,14 +47,12 @@ def main(hypothesis, counter):
     if counter % 5 == 0 :
         toggle = counter % 2 == 0 # Multiples of 5 switch between ending with
                                   # 5s and 0s. Use this even/odd to toggle boolean.
-        promptCB = confirmationbias(toggle, gen_hypo)
+        promptCB = confirmationBias(toggle, gen_hypo)
 
-    promptAB = "" # String to hold return statement from anch. bias function
-    promptAB = anchoringbias(maxTopic, topics)
+        promptAB = "" # String to hold return statement from anch. bias function
+        promptAB = anchoringbias(maxTopic, topics)
 
-    counter = counter + 1 # Increment global counter variable
+        counter = counter + 1 # Increment global counter variable
 
-    print promptCB
-    print promptAB
-
-main(hypothesis, counter) # Call the main with a given hypothesis and global counter
+        print promptCB
+        print promptAB
