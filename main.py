@@ -1,7 +1,6 @@
 from Generalize import generalize
 from confirmationbias import confirmationBias
 from anchoringbias import anchoringbias
-from dicts import counter
 
 # This main function takes in a hypothesis String, then:
 # 1.) Generalizes the hypothesis by removing all extraneous words.
