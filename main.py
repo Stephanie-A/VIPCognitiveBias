@@ -2,6 +2,7 @@ from Generalize import generalize
 from confirmationbias import confirmationBias
 from anchoringbias import anchoringbias
 
+# This is a test.
 # This main function takes in a hypothesis String, then:
 # 1.) Generalizes the hypothesis by removing all extraneous words.
 # 2.) Determines the hypothesis' focus.
